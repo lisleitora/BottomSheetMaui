@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BottomSheetMaui.Sample
+{
+    public class BottomSheet
+    {
+         public static Task<T> Open<T>(DrawerView view) where T : new()
+         {
+             return Popup.Open<T>(new BaseDrawer(view));
+         }
+
+         public static Task<string> Open(DrawerView view)
+         {
+             return Popup.Open(new BaseDrawer(view));
+         }
+
+         public static Task Close(object returnValue = null)
+         {
+             return Popup.Close(returnValue);
+         }
+     }
+
+        public class DrawerView : ContentView
+        {
+            public Command CallBackReturn;
+
+            public DrawerView()
+            {
+            }
+    }
+}
+
