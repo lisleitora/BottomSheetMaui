@@ -10,6 +10,17 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
+    <PackageId>BottomSheetMaui</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>lisleitora@gmail.com</Authors>
+    <Description>A simple BottomSheet i've made</Description>
+    <PackageProjectUrl>https://github.com/lisleitora/BottomSheetMaui</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lisleitora/BottomSheetMaui</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>BottomSheet;Sheet;.NET;MAUI;Maui</PackageTags>
+    <PackageIcon>icon.png</PackageIcon>
+
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
@@ -23,4 +34,7 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 	</ItemGroup>
 
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
 </Project>
