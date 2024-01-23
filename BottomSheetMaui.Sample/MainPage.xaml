@@ -5,22 +5,38 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <VerticalStackLayout>
+        <Label
+            x:Name="pgNameLabel"
+            FontAttributes="Bold"
+            FontFamily="Arial"
+            HorizontalOptions="Center"
+            Text="Your name is:" />
         <Button
             Margin="20,5"
             BackgroundColor="#9990c5"
-            Text="Large BottomSheet" />
+            Clicked="Popup_Clicked"
+            FontAttributes="Bold"
+            FontFamily="Arial"
+            Text="Edit text popup" />
         <Button
             Margin="20,5"
             BackgroundColor="#f5e690"
+            FontAttributes="Bold"
+            FontFamily="Arial"
             Text="Check Bottomsheet" />
         <Button
             Margin="20,5"
             BackgroundColor="#cee1f4"
+            FontAttributes="Bold"
+            FontFamily="Arial"
             Text="Little BottomSheet" />
         <Button
             Margin="20,5"
             BackgroundColor="#78a0cf"
+            FontAttributes="Bold"
+            FontFamily="Arial"
             Text="Notice BottomSheet" />
+
     </VerticalStackLayout>
 
 </ContentPage>

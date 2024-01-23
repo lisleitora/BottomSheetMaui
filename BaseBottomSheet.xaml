@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<popup:Popup
+    x:Class="BottomSheetMaui.BaseBottomSheet"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:popup="clr-namespace:BottomSheetMaui"
+    Title="BaseBottomSheet">
+    <Grid x:Name="pgRoot">
+
+        <ImageButton BackgroundColor="Transparent" Clicked="pgBackground_Clicked" />
+
+        <Grid x:Name="pgBottomSheet">
+            <ImageButton BackgroundColor="Transparent" />
+            <Border
+                x:Name="pgBottomSheetBorder"
+                Padding="0,16"
+                BackgroundColor="White"
+                Stroke="White"
+                StrokeShape="RoundRectangle 24,24,0,0" />
+            <Grid RowDefinitions="32,*">
+
+                <Rectangle
+                    BackgroundColor="#E8E8E8"
+                    HeightRequest="4"
+                    WidthRequest="40" />
+
+                <ScrollView
+                    x:Name="pgContentScroll"
+                    Grid.Row="1"
+                    VerticalOptions="Start">
+                    <Grid x:Name="pgContentView" Margin="16,0" />
+                </ScrollView>
+
+                <ImageButton
+                    x:Name="pgPanGesture"
+                    BackgroundColor="Transparent"
+                    HeightRequest="100"
+                    TranslationY="0">
+                    <ImageButton.GestureRecognizers>
+                        <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
+                    </ImageButton.GestureRecognizers>
+                </ImageButton>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</popup:Popup>

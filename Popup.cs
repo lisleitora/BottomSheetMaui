@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BottomSheetMaui.Sample
+namespace BottomSheetMaui
 {
     public class Popup<T> : Popup where T : Popup<T>, new()
     {
