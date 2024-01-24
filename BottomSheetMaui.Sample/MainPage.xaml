@@ -18,24 +18,29 @@
             FontAttributes="Bold"
             FontFamily="Arial"
             Text="Edit text popup" />
+
         <Button
             Margin="20,5"
             BackgroundColor="#f5e690"
+            Clicked="OpenSimple"
             FontAttributes="Bold"
             FontFamily="Arial"
             Text="Check Bottomsheet" />
+
         <Button
             Margin="20,5"
             BackgroundColor="#cee1f4"
             FontAttributes="Bold"
             FontFamily="Arial"
             Text="Little BottomSheet" />
+
         <Button
             Margin="20,5"
             BackgroundColor="#78a0cf"
+            Clicked="Button_Clicked"
             FontAttributes="Bold"
             FontFamily="Arial"
-            Text="Notice BottomSheet" />
+            Text="Big BottomSheet" />
 
     </VerticalStackLayout>
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<bottom:BottomSheetView
+    x:Class="BottomSheetMaui.Sample.BigSheetExample"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:bottom="clr-namespace:BottomSheetMaui;assembly=BottomSheetMaui">
+    <VerticalStackLayout>
+        <Label
+            FontAttributes="Bold"
+            FontFamily="Arial"
+            FontSize="30"
+            HorizontalOptions="Center"
+            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing."
+            VerticalOptions="Center" />
+    </VerticalStackLayout>
+</bottom:BottomSheetView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<bottom:BottomSheetView
+    x:Class="BottomSheetMaui.Sample.SheetExample"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:bottom="clr-namespace:BottomSheetMaui;assembly=BottomSheetMaui">
+
+    <Grid
+        BackgroundColor="Transparent"
+        RowDefinitions="160"
+        VerticalOptions="Center">
+        <Frame
+            Grid.Row="0"
+            Margin="20,0"
+            Padding="10"
+            BackgroundColor="#e2dcff">
+            <VerticalStackLayout>
+                <Label
+                    FontAttributes="Bold"
+                    FontFamily="Arial"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    Text="Enter your name"
+                    VerticalOptions="Center" />
+                <Entry
+                    x:Name="pgEntry"
+                    Margin="0,5"
+                    BackgroundColor="White" />
+                <Button
+                    Margin="20,0"
+                    Padding="0"
+                    BackgroundColor="#9990c5"
+                    FontAttributes="Bold"
+                    FontFamily="Arial"
+                    FontSize="25"
+                    Text="Save" />
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</bottom:BottomSheetView>
