@@ -29,3 +29,6 @@ await Popup.Open(new PopExample());
 ```csharp
 IsFadeBackground = false;
 ```
+<img src="p1.gif" height="200">
+<img src="p2.gif" height="200">
+<img src="p3.gif" height="200">
