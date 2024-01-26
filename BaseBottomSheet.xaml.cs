@@ -11,7 +11,7 @@ public partial class BaseBottomSheet : Popup
         {
             CloseBottomSheet(obj);
         });
-        //IsFadeBackground = false;
+        IsFadeBackground = false;
     }
 
     public double BackgroundOpacity = .4;
@@ -39,6 +39,7 @@ public partial class BaseBottomSheet : Popup
 
     public async void Open()
     {
+        pgBackground.FadeTo(.4);
         pgBottomSheet.CancelAnimations();
         pgBottomSheet.TranslationY = screenHeight + 50;
         if (isFirst) return;
@@ -68,6 +69,7 @@ public partial class BaseBottomSheet : Popup
 
     public async Task CloseBottomSheet(object obj = null)
     {
+        pgBackground.FadeTo(0);
         pgBottomSheet.CancelAnimations();
         await pgBottomSheet.TranslateTo(0, screenHeight + 50, 500, Easing.CubicOut);
         y = pgBottomSheet.TranslationY;

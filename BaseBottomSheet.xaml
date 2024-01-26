@@ -7,7 +7,11 @@
     Title="BaseBottomSheet">
     <Grid x:Name="pgRoot">
 
-        <ImageButton BackgroundColor="Transparent" Clicked="pgBackground_Clicked" />
+        <ImageButton
+            x:Name="pgBackground"
+            BackgroundColor="Black"
+            Clicked="pgBackground_Clicked"
+            Opacity="0" />
 
         <Grid x:Name="pgBottomSheet">
             <ImageButton BackgroundColor="Transparent" />

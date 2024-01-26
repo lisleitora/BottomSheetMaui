@@ -44,22 +44,24 @@ namespace BottomSheetMaui
         protected async override void OnParentChanged()
         {
             base.OnParentChanged();
-            var cache = this.Content;
-
-            _backgroundBack = new ImageButton()
+            if (IsFadeBackground)
             {
-                BackgroundColor = IsFadeBackground ? Colors.Black : Colors.Transparent,
-                Opacity = IsFadeBackground ? 0 : 1
-            };
-            var bugdroid = new TapGestureRecognizer();
-            cache.GestureRecognizers.Add(bugdroid);
+                var cache = this.Content;
 
-            _backgroundBack.Clicked -= OnCloseBackgroundClicked;
-            _backgroundBack.Clicked += OnCloseBackgroundClicked;
+                _backgroundBack = new ImageButton()
+                {
+                    BackgroundColor = IsFadeBackground ? Colors.Black : Colors.Transparent,
+                    Opacity = IsFadeBackground ? 0 : 1
+                };
+                var bugdroid = new TapGestureRecognizer();
+                cache.GestureRecognizers.Add(bugdroid);
 
-            await Task.Delay(100).ConfigureAwait(true);
+                _backgroundBack.Clicked -= OnCloseBackgroundClicked;
+                _backgroundBack.Clicked += OnCloseBackgroundClicked;
 
-            var grid = new Grid() { _backgroundBack, cache };
+                await Task.Delay(100).ConfigureAwait(true);
+
+                var grid = new Grid() { _backgroundBack, cache };
 
 #if IOS || MACCATALYST
             if (RemoveBottomSafeArea)
@@ -68,7 +70,8 @@ namespace BottomSheetMaui
                 grid.Margin = new Thickness(0, 0, 0, -safeAreaInsets.Bottom);
             }
 #endif
-            this.Content = grid;
+                this.Content = grid;
+            }
         }
 
         void OnCloseBackgroundClicked(object sender, EventArgs args)
